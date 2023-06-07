@@ -4,6 +4,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\API\AuthController;
 use App\Http\Controllers\API\FoodController;
+use App\Http\Controllers\API\RestaurantController;
+use App\Http\Controllers\API\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,3 +28,5 @@ Route::middleware('auth:sanctum')->get('logout', [AuthController::class, 'logout
 Route::middleware('auth:sanctum')->post('update', [AuthController::class, 'update']);
 
 Route::apiResource('food', FoodController::class);
+Route::apiResource('restaurant', RestaurantController::class);
+Route::apiResource('order', OrderController::class);
